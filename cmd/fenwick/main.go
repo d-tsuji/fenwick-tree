@@ -20,7 +20,7 @@ func main() {
 	var n, q int
 	fmt.Fscan(r, &n, &q)
 
-	tree := fenwick.New(n)
+	tree := fenwick.NewTree(n)
 
 	for i := 0; i < q; i++ {
 		var com, x, y int

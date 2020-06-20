@@ -12,11 +12,11 @@ type Tree struct {
 	bit []int
 }
 
-// New initializes a slice of the Fenwick tree.
-func New(n int) *Tree {
+// NewTree initializes a slice of the Fenwick tree.
+func NewTree(n int) *Tree {
 	return &Tree{
 		n:   n,
-		bit: make([]int, n),
+		bit: make([]int, n+1),
 	}
 }
 

@@ -40,7 +40,7 @@ func TestTree(t *testing.T) {
 
 	for i, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			tree := New(tt.size)
+			tree := NewTree(tt.size)
 			for _, q := range tt.qs {
 				tree.Add(q.index, q.value)
 			}
