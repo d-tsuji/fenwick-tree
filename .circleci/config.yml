@@ -1,0 +1,21 @@
+version: 2
+
+jobs:
+  test:
+    docker:
+      # CircleCI Go images available at: https://hub.docker.com/r/circleci/golang/
+      - image: circleci/golang:1.14.4
+
+    working_directory: /go/src/github.com/d-tsuji/fenwick-tree
+
+    # Environment values for all container
+    steps:
+      - checkout
+      - run:
+          name: Run all unit tests
+          command: make test
+workflows:
+  version: 2
+  build-and-test:
+    jobs:
+      - test
